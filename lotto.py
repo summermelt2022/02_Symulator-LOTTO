@@ -63,18 +63,26 @@ Looking for hit numbers.
     return win_list
 
 
-user_numbers = user_pick()
-print(f'You chose: {user_numbers}')
-computer_numbers = computer_pick()
-print(f'Computer draw: {computer_numbers}')
+def lotto_game():
+    """
+Game
+    :return: Winning numbers
+    """
+    user_numbers = user_pick()
+    print(f'You chose: {user_numbers}')
+    computer_numbers = computer_pick()
+    print(f'Computer draw: {computer_numbers}')
 
-dict_draw = {
-    0: "zero numbers",
-    1: "one number",
-    2: "two numbers",
-    3: "three numbers",
-    4: "four numbers",
-    5: "five numbers",
-    6: "six numbers",
-}
-print(f'You hit {dict_draw[len(win(user_numbers, computer_numbers))]}.')
+    dict_draw = {
+        0: "zero numbers",
+        1: "one number",
+        2: "two numbers",
+        3: "three numbers",
+        4: "four numbers",
+        5: "five numbers",
+        6: "six numbers",
+    }
+    return print(f'You hit {dict_draw[len(win(user_numbers, computer_numbers))]}.')
+
+
+lotto_game()
